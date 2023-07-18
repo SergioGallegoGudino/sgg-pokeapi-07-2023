@@ -17,7 +17,11 @@ export class ListaPokemonComponent {
   }
 
   buscar(){
-    console.log(this.nombre);
+    for (let i = 0; i < this.database.results.length; i++) {
+      if(this.database.results[i].name == this.nombre){
+        console.log("a");
+      }
+    }
   }
 
 }
