@@ -1,0 +1,33 @@
+<div *ngIf="mostrarNavbar">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-bg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img class="img-fluid medidaImagen" src="\assets\img\logo.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a routerLink="" class="navlink">Home</a> &nbsp;
+                </li>
+                <li class="nav-item">
+                    <a routerLink="pokemon" class="navlink">Pokemon</a> &nbsp;
+                </li>
+                <li class="nav-item">
+                    <a routerLink="about" class="navlink">About</a> &nbsp;
+                </li>
+            </ul>
+            <form class="d-flex mx-auto" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <li class="nav-item">
+                <a routerLink="login">Iniciar sesion</a> &nbsp;
+            </li>
+            <li class="nav-item">
+                <a routerLink="register">Registrarse</a> &nbsp;
+            </li>
+            </div>
+        </div>
+    </nav>
+</div>

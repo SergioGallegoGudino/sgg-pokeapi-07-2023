@@ -1,0 +1,14 @@
+<h2 class="subtitulos text-center">POKEMON</h2>
+<hr>
+<form #formulario="ngForm">
+    <input class="form-control" type="text" id="search" placeholder="Busca un pokemon" [(ngModel)]="nombre">
+    <button type="form-control submit" (click)="buscar()" class="btn btn-warning">Buscar</button>
+</form>
+<div *ngIf="database" class="d-flex row personajes justify-content-center mt-2" >
+    <div class="card col-md-4 text-center margenes" style="width: 18rem;" *ngFor="let pokemon of database.results; index as i; first as isFirst">
+        <div class="card-body">
+            <h5 class="card-title">{{pokemon.name}}</h5>
+            <a class="btn btn-warning" [routerLink]="['/detalles', pokemon.name]">Ver detalles</a>
+        </div>
+    </div>
+</div>

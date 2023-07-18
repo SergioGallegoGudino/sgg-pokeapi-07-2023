@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+<div *ngIf="datos" class="m-5 text-center">
+    <img src={{datos.sprites.front_default}}>
+    <img src={{datos.sprites.back_default}}>
+    <p *ngFor="let data of datos.forms; index as i; first as isFirst"><b>Nombre:</b> {{data.name}}</p>
+    <p *ngFor="let data of datos.forms; index as i; first as isFirst"><b>Especie:</b> {{especie.name}}</p>
+    <p *ngFor="let data of datos.forms; index as i; first as isFirst"><b>Generación:</b> {{especie.generation.name}}</p>
+        <b>Habilidades:</b>
+        <li type="none" *ngFor="let data of datos.abilities; index as i; first as isFirst">{{data.ability.name}}</li>
+    <br>
+    <a routerLink="/pokemon" class="navlink btn btn-warning">Volver</a> &nbsp;
+</div>
