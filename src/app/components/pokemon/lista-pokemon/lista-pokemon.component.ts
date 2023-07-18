@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { PokemonService } from 'src/app/services/pokemon.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class ListaPokemonComponent {
   pokemon: any = null;
   filtro: boolean = false;
   nombre: any = "";
-  constructor(private pokemonService: PokemonService){}
+  constructor(private pokemonService: PokemonService,  private router: Router){}
 
   ngOnInit(){
     this.pokemonService.getAll()
@@ -19,6 +20,9 @@ export class ListaPokemonComponent {
   }
 
   buscar(){
+    if(this.nombre != ""){
+      this.router.navigate(['/detalles', this.nombre]);
+    }
   }
 
 }
