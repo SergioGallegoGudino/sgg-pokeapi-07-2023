@@ -8,7 +8,9 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 })
 export class ListaPokemonComponent {
   database:any = null;
-  nombre:string = "";
+  pokemon: any = null;
+  filtro: boolean = false;
+  nombre: any = "";
   constructor(private pokemonService: PokemonService){}
 
   ngOnInit(){
@@ -17,11 +19,6 @@ export class ListaPokemonComponent {
   }
 
   buscar(){
-    for (let i = 0; i < this.database.results.length; i++) {
-      if(this.database.results[i].name == this.nombre){
-        console.log("a");
-      }
-    }
   }
 
 }
